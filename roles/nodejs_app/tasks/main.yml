@@ -25,7 +25,7 @@
     group: root
 
 - name: Start MongoDB
-  command: /etc/init.d/mongod
+  command: /etc/init.d/mongod start
 
 # make sure git & mongodbis installed
 - name: install git
