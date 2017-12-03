@@ -9,6 +9,12 @@
     owner: "{{ system_user }}"
     group: "{{ system_user }}"
     mode: 0700
+    
+# make sure git is installed
+- name: install git
+  yum: 
+    name: git
+    state: present
 
 # Get the latest snapshot
 - name: Git Clone
