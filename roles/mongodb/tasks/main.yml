@@ -26,5 +26,8 @@
   notify: restart mongod
   when: mongo_port.changed
 
+- name: Create the DB path
+  command: mongod --dbpath "/data/db"
+
 - name: Enable mongod service on startup
   service: name=mongod enabled=yes
