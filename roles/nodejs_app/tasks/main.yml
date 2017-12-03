@@ -9,12 +9,14 @@
     owner: "{{ system_user }}"
     group: "{{ system_user }}"
     mode: 0700
-    
-# make sure git is installed
+
+# make sure git & mongodbis installed
 - name: install git
   yum: 
-    name: git
+    name: "{{ item }}"
     state: present
+  with_items:
+    - git
 
 # Get the latest snapshot
 - name: Git Clone

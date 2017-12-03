@@ -5,8 +5,8 @@
 #############################################
 
 # from galaxy
-- src: MindPointGroup.RHEL7-STIG
-  name: RHEL7-STIG
+# - src: MindPointGroup.RHEL7-STIG
+#   name: RHEL7-STIG
 
 # - src: sfromm.epel
 #   name: epel
@@ -30,3 +30,6 @@
 # # from bitbucket, alternative syntax and caveats
 # - src: http://bitbucket.org/willthames/hg-ansible-galaxy
 #   scm: hg
+
+- src: ice9js.mongodb
+  name: mongodb
