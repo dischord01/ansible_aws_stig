@@ -12,15 +12,13 @@
 
 - name: create mongodb data directory
   file: 
-    name: data 
     path: /data
     state: directory
     owner: root
     group: root
 
-- name: create mongodb data directory
-  file: 
-    name: db 
+- name: create mongodb db directory
+  file:  
     path: /data/db
     state: directory
     owner: root
