@@ -1,0 +1,25 @@
+# file: roles/nodejs_app/tasks/main.yml
+---
+
+- name: create web directory
+  file: 
+    name: nodejs_app 
+    path: "/home/{{ system_user }}"
+    state: directory
+    owner: "{{ system_user }}"
+    group: "{{ system_user }}"
+    mode: 0700
+
+# Get the latest snapshot
+- name: Git Clone
+  git:
+    dest: "/home/{{ system_user }}/nodejs_app"
+    repo: "https://github.com/sahat/hackathon-starter.git"
+
+# Change directory
+- name: NPM Install  
+  command: npm install chdir="/home/{{ system_user }}/nodejs_app"
+
+# Then simply start your app
+- name: NPM Install  
+  command: node app.js chdir="/home/{{ system_user }}/nodejs_app"
