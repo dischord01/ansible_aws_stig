@@ -1,0 +1,4 @@
+# file: inventory
+
+[local_target]
+localhost  ansible_connection=local  

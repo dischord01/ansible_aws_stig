@@ -1,0 +1,13 @@
+---
+- name: Install & Configure 
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  become: no
+
+  tasks:
+  #---------------------------------------------------
+  # Update autmaticly the inventory in Tower
+  #---------------------------------------------------
+    - name: tower-cli update inventory
+      command: tower-cli inventory batch_update -n "{{ stig_inventory_name }}" -u admin -p {{ tower_password }}

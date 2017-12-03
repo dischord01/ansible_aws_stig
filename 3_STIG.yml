@@ -1,0 +1,9 @@
+# file: 2_STIG.yml
+---
+- name: Install & Configure 
+  hosts: all
+  become: yes
+  roles:
+  - { role: subscription_manager }
+  # - { role: epel                 }
+  - { role: RHEL7-STIG           }

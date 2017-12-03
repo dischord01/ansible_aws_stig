@@ -1,0 +1,18 @@
+# file: 1_AWS.yml
+---
+- name: Install & Configure 
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  become: no
+  roles:
+  - { role: aws_infra_ansible    }
+
+
+
+# ansible-vault encrypted 
+# username
+# password
+# pool_id
+# tower_password
+# stig_inventory_name

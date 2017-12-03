@@ -1,0 +1,8 @@
+# file: group_vars/all
+
+# You will need a active subscription to register nodes for updates and proper repositories. Change this file's name to "all" and save.
+
+# Red Hat Subscription Manager 
+username:                     ""
+password:                     ""
+pool_id:                      ""

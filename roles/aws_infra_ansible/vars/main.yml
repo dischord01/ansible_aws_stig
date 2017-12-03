@@ -1,0 +1,48 @@
+# file: roles/aws.infra.ansible/vars/main.yml
+---
+#####################################################
+# Unique Name:
+#####################################################
+name: "AnsibleTowerDemo"
+
+#####################################################
+# VPC Vars:
+#####################################################
+region: us-east-1
+cidr_block: 172.22.0.0/16
+vpc_resource_tags: { "DeleteTag": "ATW", "Name": "AnsibleTowerDemo" }
+
+#####################################################
+# Subnet Vars:
+#####################################################
+subnet_resource_tags: { "DeleteTag": "ATW", "Name": "AnsibleTowerDemo" }
+
+#####################################################
+# Route Vars:
+#####################################################
+route_resource_tags:  { "DeleteTag": "ATW", "Name": "AnsibleTowerDemo" }
+
+#####################################################
+# Route Vars:
+#####################################################
+az: "us-east-1f"
+
+#####################################################
+# Security Group Vars:
+#####################################################
+security_group: AnsibleTowerDemoSG
+
+#####################################################
+# SSH Key Vars:
+#####################################################
+ssh_key_path: "{{ lookup('env','HOME') }}/.ssh"
+
+#####################################################
+# EC2 Vars:
+#####################################################
+workshop_keypair: "stig"
+workshop_instance_type: t2.medium #m4.large 
+workshop_ami: ami-9e2f0988 # RHEL7
+workshop_public_ip: yes
+workshop_instance_tag: "AnsibleTowerSTIG"
+
