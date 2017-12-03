@@ -26,6 +26,9 @@
     owner: root
     group: root
 
+- name: Start MongoDB
+  command: mongod --dbpath "/data/db"
+
 # make sure git & mongodbis installed
 - name: install git
   yum: 
