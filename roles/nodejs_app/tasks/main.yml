@@ -45,10 +45,13 @@
 - name: NPM Install  
   command: npm install chdir="/home/{{ system_user }}/nodejs_app"
 
-# Strongloop process manager
-- name: NPM Install  
-  command: npm install -g strongloop chdir="/home/{{ system_user }}/nodejs_app"
+# systemd
+- name: Create Systemd unit file
+  template: 
+    src: express.service
+    dest: /etc/systemd/system/express.service
 
-# Then simply start your app
-- name: Start the app  
-  command: slc start && chdir="/home/{{ system_user }}/nodejs_app"
+- name: Start service
+  service:
+    name: express
+    state: started
