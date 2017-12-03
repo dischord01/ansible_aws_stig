@@ -47,8 +47,8 @@
 
 # Strongloop process manager
 - name: NPM Install  
-  command: npm install pm2 -g chdir="/home/{{ system_user }}/nodejs_app"
+  command: npm install -g strongloop chdir="/home/{{ system_user }}/nodejs_app"
 
 # Then simply start your app
 - name: Start the app  
-  command: pm2 start app.js && chdir="/home/{{ system_user }}/nodejs_app"
+  command: slc start && chdir="/home/{{ system_user }}/nodejs_app"
