@@ -10,6 +10,22 @@
     group: "{{ system_user }}"
     mode: 0700
 
+- name: create mongodb data directory
+  file: 
+    name: data 
+    path: /data
+    state: directory
+    owner: root
+    group: root
+
+- name: create mongodb data directory
+  file: 
+    name: db 
+    path: /data/db
+    state: directory
+    owner: root
+    group: root
+
 # make sure git & mongodbis installed
 - name: install git
   yum: 
