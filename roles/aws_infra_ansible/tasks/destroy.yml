@@ -87,6 +87,21 @@
   tags: 
     - vpc_destroy
 
+- name: debug vpc facts
+  debug: var=aws_vpc_id
+  tags: 
+    - vpc_destroy
+
+- name: debug vpc facts
+  debug: var=aws_vpc_name
+  tags: 
+    - vpc_destroy
+
+- name: debug vpc facts
+  debug: var=vpc_delete_cidr_block
+  tags: 
+    - vpc_destroy
+
 - name: debug subnet facts
   debug: var=aws_subnet_facts
   tags: 
@@ -121,7 +136,6 @@
 - name: Pause for EC2 instance to delete
   pause:
     seconds: "30"
-
 
 - name: Delete Sec Group
   ec2_group:
