@@ -174,7 +174,7 @@
 - name: Delete Subnet 
   ec2_vpc_subnet:
     vpc_id: "{{ vpc_delete_id }}"
-    cidr: "{{ cidr_block }}"
+    cidr:  "{{ vpc_delete_cidr_block }}" #"{{ cidr_block }}"
     region: "{{ region }}"
     state: absent
   tags: 
