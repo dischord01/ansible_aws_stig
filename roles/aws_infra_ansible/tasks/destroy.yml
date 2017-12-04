@@ -88,12 +88,12 @@
     - vpc_destroy
 
 - name: debug vpc facts
-  debug: var=aws_vpc_id
+  debug: var=vpc_delete_id
   tags: 
     - vpc_destroy
 
 - name: debug vpc facts
-  debug: var=aws_vpc_name
+  debug: var=vpc_delete_id
   tags: 
     - vpc_destroy
 
