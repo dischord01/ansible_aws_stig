@@ -38,6 +38,11 @@
   tags: 
     - vpc_destroy
 
+- set_fact:
+    vpc_delete_cidr_block: "{{ aws_vpc_facts.vpcs[0].cidr_block }}"
+  tags: 
+    - vpc_destroy
+
 # AWS Subnets
 - ec2_vpc_subnet_facts:
     region: "{{ region }}"
@@ -165,6 +170,7 @@
   ec2_vpc_net:
     name: "{{ vpc_delete_name }}"
     region: "{{ region }}"
+    cidr_block: "{{ vpc_delete_cidr_block }}"
     resource_tags: { DeleteTag: "ATW" }
     state: absent
   tags: 
