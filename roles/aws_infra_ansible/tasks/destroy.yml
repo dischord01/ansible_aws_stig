@@ -113,7 +113,7 @@
     - vpc_destroy
 
 - name: debug sec group facts
-  debug: var=aws_sec_group
+  debug: var=aws_sec_group[0].tags.Name
   tags: 
     - vpc_destroy
 
