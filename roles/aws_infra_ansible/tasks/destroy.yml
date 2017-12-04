@@ -113,7 +113,7 @@
     - vpc_destroy
 
 - name: debug sec group facts
-  debug: var=aws_sec_group.group_name
+  debug: var=aws_sec_group
   tags: 
     - vpc_destroy
 
@@ -139,7 +139,7 @@
 
 - name: Delete Sec Group
   ec2_group:
-    name: ""
+    name: "{{ sg_name }}"
     region: "{{ region }}"
     vpc_id: "{{ vpc_delete_id }}"
     state: absent
@@ -148,7 +148,7 @@
 
 - name: Delete NACL
   ec2_vpc_nacl:
-    name: ""
+    name: "{{ nacl_name }}"
     region: "{{ region }}"
     vpc_id: "{{ vpc_delete_id }}"
     state: absent
