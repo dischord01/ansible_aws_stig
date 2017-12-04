@@ -157,6 +157,7 @@
 
 - name: Delete Route Table
   ec2_vpc_route_table:
+    route_table_id: "{{ aws_route_tables.route_tables[0].associations['route_table_id'] }}"
     vpc_id: "{{ vpc_delete_id }}"
     region: "{{ region }}"
     state: absent
