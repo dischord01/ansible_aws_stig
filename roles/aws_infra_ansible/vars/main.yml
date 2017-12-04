@@ -15,22 +15,22 @@ vpc_resource_tags: { "DeleteTag": "ATW", "Name": "AnsibleTowerDemo" }
 #####################################################
 # Subnet Vars:
 #####################################################
-subnet_resource_tags: { "DeleteTag": "ATW", "Name": "AnsibleTowerDemo" }
+subnet_resource_tags: { "DeleteTag": "ATW", "Name": "AnsibleTower_Subnet" }
 
 #####################################################
 # Route Vars:
 #####################################################
-route_resource_tags:  { "DeleteTag": "ATW", "Name": "AnsibleTowerDemo" }
+route_resource_tags:  { "DeleteTag": "ATW", "Name": "AnsibleTower_Route" }
 
 #####################################################
 # IGW Vars:
 #####################################################
-igw_resource_tags:  { "DeleteTag": "ATW", "Name": "AnsibleTowerDemo" }
+igw_resource_tags:  { "DeleteTag": "ATW", "Name": "AnsibleTower_IGW" }
 
 #####################################################
 # SG Vars:
 #####################################################
-sg_resource_tags:  { "DeleteTag": "ATW", "Name": "AnsibleTowerDemo" }
+sg_resource_tags:  { "DeleteTag": "ATW", "Name": "AnsibleTower_Security_Group" }
 
 #####################################################
 # Route Vars:
