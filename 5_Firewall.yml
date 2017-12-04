@@ -1,0 +1,11 @@
+# file: 5_Firewall.yml
+---
+- name: Fix Firewall 
+  hosts: all
+  become: yes
+  roles:
+    - { role: firewalld         }
+
+
+
+

@@ -1,0 +1,12 @@
+# file: roles/firewalld/tasks/main.yml
+---
+- firewalld:
+    port: 8080/tcp
+    permanent: true
+    state: enabled
+
+
+- firewalld:
+    port: 22/tcp
+    permanent: true
+    state: enabled
