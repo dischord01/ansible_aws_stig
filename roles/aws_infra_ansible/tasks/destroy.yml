@@ -157,7 +157,7 @@
     - vpc_destroy
 
 - name: Delete VPC
-  ec2_vpc:
+  ec2_vpc_net:
     vpc_id: "{{ vpc_delete_id }}"
     region: "{{ region }}"
     resource_tags: { DeleteTag: "ATW" }
