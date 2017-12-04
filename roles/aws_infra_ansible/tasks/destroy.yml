@@ -93,7 +93,7 @@
     - vpc_destroy
 
 - name: debug vpc facts
-  debug: var=vpc_delete_id
+  debug: var=vpc_delete_name
   tags: 
     - vpc_destroy
 
