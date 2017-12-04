@@ -52,6 +52,7 @@
     state:  present
     vpc_id: "{{ aws_vpc_id }}"
     region: "{{ region }}"
+    tags: "{{ igw_resource_tags }}"
   register: igw
   tags:
     - vpc_create
@@ -83,6 +84,7 @@
     name:   "{{ name }}"
     vpc_id: "{{ aws_vpc_id }}"
     region: "{{ region }}"
+    tags: "{{ sg_resource_tags }}"
     rules:
       - proto: tcp
         from_port: 80

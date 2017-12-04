@@ -23,6 +23,16 @@ subnet_resource_tags: { "DeleteTag": "ATW", "Name": "AnsibleTowerDemo" }
 route_resource_tags:  { "DeleteTag": "ATW", "Name": "AnsibleTowerDemo" }
 
 #####################################################
+# IGW Vars:
+#####################################################
+igw_resource_tags:  { "DeleteTag": "ATW", "Name": "AnsibleTowerDemo" }
+
+#####################################################
+# SG Vars:
+#####################################################
+sg_resource_tags:  { "DeleteTag": "ATW", "Name": "AnsibleTowerDemo" }
+
+#####################################################
 # Route Vars:
 #####################################################
 az: "us-east-1f"
