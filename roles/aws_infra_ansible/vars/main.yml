@@ -31,6 +31,7 @@ igw_resource_tags:  { "DeleteTag": "ATW", "Name": "AnsibleTower_IGW" }
 # SG Vars:
 #####################################################
 sg_resource_tags:  { "DeleteTag": "ATW", "Name": "AnsibleTower_Security_Group" }
+sg_name:           "{{ AnsibleTower_SG }}"
 
 #####################################################
 # Route Vars:

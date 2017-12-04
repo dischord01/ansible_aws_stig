@@ -27,7 +27,7 @@
     var: aws_vpc_id
 
 #---------------------------------------------------
-#  Security Group
+#  Create Subnet
 #---------------------------------------------------
 - name: Create subnet 
   ec2_vpc_subnet:
@@ -81,7 +81,7 @@
 - name: Security group
   ec2_group:
     description: EC2 security group
-    name:   "{{ name }}"
+    name:   "{{ sg_name }}"
     vpc_id: "{{ aws_vpc_id }}"
     region: "{{ region }}"
     tags: "{{ sg_resource_tags }}"
