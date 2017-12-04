@@ -33,6 +33,11 @@
   tags: 
     - vpc_destroy
 
+- set_fact:
+    vpc_delete_name: "{{ aws_vpc_facts.vpcs[0].tags.Name }}"
+  tags: 
+    - vpc_destroy
+
 # AWS Subnets
 - ec2_vpc_subnet_facts:
     region: "{{ region }}"
@@ -158,7 +163,7 @@
 
 - name: Delete VPC
   ec2_vpc_net:
-    vpc_id: "{{ vpc_delete_id }}"
+    name: "{{ vpc_delete_name }}"
     region: "{{ region }}"
     resource_tags: { DeleteTag: "ATW" }
     state: absent
