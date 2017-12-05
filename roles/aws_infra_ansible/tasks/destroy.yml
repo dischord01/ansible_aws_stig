@@ -130,17 +130,17 @@
 #####################################################
 # DELETE 
 #####################################################
-# - name: Terminate EC2 instances that were previously launched
-#   ec2:
-#     state: 'absent'
-#     region: "{{ region }}"
-#     instance_ids: '{{ aws_ec2_facts.instances[0].id }}'
-#   tags: 
-#     - vpc_destroy
+- name: Terminate EC2 instances that were previously launched
+  ec2:
+    state: 'absent'
+    region: "{{ region }}"
+    instance_ids: '{{ aws_ec2_facts.instances[0].id }}'
+  tags: 
+    - vpc_destroy
 
-# - name: Pause for EC2 instance to delete
-#   pause:
-#     seconds: "30"
+- name: Pause for EC2 instance to delete
+  pause:
+    seconds: "10"
 
 - name: Delete Sec Group
   ec2_group:
