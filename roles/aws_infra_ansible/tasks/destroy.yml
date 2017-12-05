@@ -111,6 +111,11 @@
   debug: var=aws_route_tables
   tags: 
     - vpc_destroy
+- name: debug route facts
+  debug: var=aws_route_tables.route_tables[0].associations #.route_table_id
+  tags: 
+    - vpc_destroy
+
 
 - name: debug sec group facts
   debug: var=aws_sec_group
@@ -157,7 +162,7 @@
 
 - name: Delete Route Table
   ec2_vpc_route_table:
-    route_table_id: "{{ aws_route_tables.route_tables[0].associations.route_table_id }}"
+    route_table_id: ""
     vpc_id: "{{ vpc_delete_id }}"
     region: "{{ region }}"
     state: absent
