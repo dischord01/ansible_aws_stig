@@ -78,11 +78,11 @@
 #---------------------------------------------------
 #  NACL
 #---------------------------------------------------
-# - name: "Remove the ingress and egress rules - defaults to deny all"
-#   ec2_vpc_nacl:
-#     vpc_id: "{{ aws_vpc_id }}"
-#     name: "{{ nacl_name }}"
-#     region: "{{ region }}"
+- name: "Remove the ingress and egress rules - defaults to deny all"
+  ec2_vpc_nacl:
+    vpc_id: "{{ aws_vpc_id }}"
+    name: "{{ nacl_name }}"
+    region: "{{ region }}"
 
 #---------------------------------------------------
 #  Security Groups
