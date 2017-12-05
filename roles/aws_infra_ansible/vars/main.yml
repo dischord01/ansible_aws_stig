@@ -57,7 +57,7 @@ ssh_key_path: "{{ lookup('env','HOME') }}/.ssh"
 # EC2 Vars:
 #####################################################
 workshop_keypair: "cicd-private-key"
-workshop_instance_type: t2.medium #m4.large 
+workshop_instance_type: t2.small #m4.large 
 workshop_ami: ami-9e2f0988 # RHEL7
 workshop_public_ip: yes
 workshop_instance_tag: "AnsibleTowerSTIG"
