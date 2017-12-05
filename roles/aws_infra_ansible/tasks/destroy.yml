@@ -142,18 +142,18 @@
   pause:
     seconds: "10"
 
-- name: Delete Sec Group
-  ec2_group:
-    name: "{{ sg_name }}"
+- name: Delete NACL
+  ec2_vpc_nacl:
+    name: "{{ nacl_name }}"
     region: "{{ region }}"
     vpc_id: "{{ vpc_delete_id }}"
     state: absent
   tags: 
     - vpc_destroy
 
-- name: Delete NACL
-  ec2_vpc_nacl:
-    name: "{{ nacl_name }}"
+- name: Delete Sec Group
+  ec2_group:
+    name: "{{ sg_name }}"
     region: "{{ region }}"
     vpc_id: "{{ vpc_delete_id }}"
     state: absent
