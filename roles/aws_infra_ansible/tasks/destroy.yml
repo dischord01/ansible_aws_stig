@@ -138,9 +138,9 @@
 #   tags: 
 #     - vpc_destroy
 
-- name: Pause for EC2 instance to delete
-  pause:
-    seconds: "30"
+# - name: Pause for EC2 instance to delete
+#   pause:
+#     seconds: "30"
 
 - name: Delete Sec Group
   ec2_group:
