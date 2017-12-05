@@ -10,3 +10,6 @@
     port: 22/tcp
     permanent: true
     state: enabled
+
+- name: Bounce firewalld
+  service: name=firewalld state=restarted
