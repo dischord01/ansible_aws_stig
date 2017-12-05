@@ -1,0 +1,6 @@
+---
+- name: Install & Configure 
+  hosts: all
+  become: yes
+  roles:
+  - { role: subscription_manager }
