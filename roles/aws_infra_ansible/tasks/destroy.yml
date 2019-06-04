@@ -144,7 +144,7 @@
 
 - name: Pause for EC2 instance to delete
   pause:
-    seconds: "20"
+    seconds: "60"
 
 - name: Delete NACL
   ec2_vpc_nacl:
