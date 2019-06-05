@@ -1,5 +1,5 @@
 ---
-- name: Install & Configure 
+- name: Inventory Sync
   hosts: localhost
   connection: local
   gather_facts: false
@@ -9,5 +9,5 @@
   #---------------------------------------------------
   # Update autmaticly the inventory in Tower
   #---------------------------------------------------
-    - name: tower-cli update inventory
-      command: tower-cli inventory batch_update -n "{{ stig_inventory_name }}" -u admin -p {{ tower_password }}
+    - name: Inventory in Tower is set to update on launch. This just is a step to sync.
+      command: time
