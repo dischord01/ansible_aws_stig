@@ -10,4 +10,4 @@
   # Update autmaticly the inventory in Tower
   #---------------------------------------------------
     - name: Inventory in Tower is set to update on launch. This just is a step to sync.
-      command: time
+      command: date
