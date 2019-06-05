@@ -46,6 +46,8 @@
 # Change directory
 - name: NPM Install  
   command: npm install chdir="/home/{{ system_user }}/nodejs_app"
+  become: yes
+  become_user: ec2-user
 
 # systemd
 - name: Create Systemd unit file
