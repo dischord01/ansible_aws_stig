@@ -40,6 +40,8 @@
   git:
     dest: "/home/{{ system_user }}/nodejs_app"
     repo: "https://github.com/sahat/hackathon-starter.git"
+  become: yes
+  become_user: ec2-user
 
 # Change directory
 - name: NPM Install  
