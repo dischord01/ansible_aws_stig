@@ -1,0 +1,26 @@
+# tasks file for kickoff_tower_workflow
+---
+
+- name: Job Template to launch a Workflow Job Template
+  uri:
+    url: https://ansible1-d4a1.rhpds.opentlc.com/api/v2/workflow_job_templates/29/launch/
+    method: POST
+    user: "{{ tower_user }}"
+    password: "{{ tower_pass }}"
+    url_username: "{{ tower_user }}"
+    url_password: "{{ tower_pass }}"
+    force_basic_auth: yes
+    body:
+      user: "{{ tower_user }}"
+      password: "{{ tower_pass }}"
+      extra_vars:
+        workshop_instance_type: "{{ workshop_instance_type | default('t2.small') }}"
+        workshop_keypair: "{{ workshop_keypair | default('cicd-private-key') }}"
+        workshop_ami: "{{ workshop_ami | default('ami-9e2f0988') }}"
+        additional_tags: "{{ additional_tags | default('CostCenter_00671') }}"
+        workflow_job_template_id: 29
+    body_format: json
+    validate_certs: False
+    headers:
+      Content-Type: "application/json"
+    status_code: 200, 201
