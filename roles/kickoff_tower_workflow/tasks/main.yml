@@ -5,9 +5,11 @@
   uri:
     url: https://ansible1-d4a1.rhpds.opentlc.com/api/v1/workflow_job_templates/{{ workflow_job_template_id }}/launch/
     method: POST
+    user: "{{ tower_user }}"
+    password: "{{ tower_pass }}"
+    url_username: "{{ tower_user }}"
+    url_password: "{{ tower_pass }}"
     body:
-      user: "{{ tower_user }}"
-      password: "{{ tower_pass }}"
       extra_vars:
         launched_from: CloudForms
         workshop_instance_type: "{{ workshop_instance_type | default('t2.small') }}"
