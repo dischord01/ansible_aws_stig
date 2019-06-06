@@ -10,6 +10,8 @@
     url_username: "{{ tower_user }}"
     url_password: "{{ tower_pass }}"
     body:
+      user: "{{ tower_user }}"
+      password: "{{ tower_pass }}"
       extra_vars:
         launched_from: CloudForms
         workshop_instance_type: "{{ workshop_instance_type | default('t2.small') }}"
