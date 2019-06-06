@@ -1,0 +1,9 @@
+---
+- name: Launching Workflow
+  hosts: localhost
+  gather_facts: False
+  connection: local
+
+
+  roles:
+  - kickoff_tower_workflow
