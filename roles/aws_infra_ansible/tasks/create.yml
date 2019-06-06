@@ -143,6 +143,7 @@
       StopGroup: "OfficeHoursTerminator"
       DeleteTag: "ATW"
       SecurityGroup: "DISA_STIG_RHEL_7"
+      AdditionalTags: "{{ additional_tags }}"
     vpc_subnet_id: "{{ aws_subnet_id }}"
   register: ec2_instance
   tags:
