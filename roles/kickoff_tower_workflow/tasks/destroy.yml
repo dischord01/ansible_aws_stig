@@ -1,9 +1,9 @@
 # tasks file for kickoff_tower_workflow
 ---
 
-- name: Job Template to launch a Workflow Job Template
+- name: Job Template to destroy a Workflow Job Template
   uri:
-    url: https://ansible1-d4a1.rhpds.opentlc.com/api/v2/workflow_job_templates/29/launch/
+    url: https://ansible1-d4a1.rhpds.opentlc.com/api/v2/workflow_job_templates/28/launch/
     method: POST
     user: "{{ tower_user }}"
     password: "{{ tower_pass }}"
