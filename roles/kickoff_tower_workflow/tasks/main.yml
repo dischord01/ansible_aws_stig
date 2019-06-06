@@ -18,7 +18,7 @@
         workshop_keypair: "{{ workshop_keypair | default('cicd-private-key') }}"
         workshop_ami: "{{ workshop_ami | default('ami-9e2f0988') }}"
         additional_tags: "{{ additional_tags | default('CostCenter_00671') }}"
-        workflow_job_template_id: "{{ workflow_job_template_id | default(29) }}"
+        workflow_job_template_id: "{{ workflow_job_template_id | int | default(29) }}"
     body_format: json
     validate_certs: False
     headers:
